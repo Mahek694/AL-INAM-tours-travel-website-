@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL-INAM Tour & Travel</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Iconscout Link -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <style>
+        /* Styling for professional color scheme */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #343a40;
+        }
+
+        .navbar {
+            background-color: #f1f5f8;
+        }
+
+        .navbar-brand {
+            color: #3e4e65 !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #3e4e65 !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f8b400 !important;
+        }
+
+        .home {
+            position: relative;
+            background: url('images/home1.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .home .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .category, .contact, .footer {
+            padding: 60px 0;
+        }
+
+        .category {
+            background-color: #f7f9fc;
+        }
+
+        .category .box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease;
+        }
+
+        .category .box:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .category h3 {
+            color: #3e4e65;
+        }
+
+        .category p {
+            color: #6c757d;
+        }
+
+        .packages {
+            background-color: #f0f4f8;
+        }
+
+        .packages .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .packages .card-body {
+            text-align: center;
+        }
+
+        .packages .price {
+            color: #3e4e65;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .packages .btn {
+            background-color: #f8b400;
+            border: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .packages .btn:hover {
+            background-color: #e6a800;
+        }
+
+        .contact {
+            background-color: #e9ecef;
+        }
+
+        .contact .title1 h1 {
+            font-size: 40px;
+            color: #3e4e65;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            padding: 12px;
+            width: 100%;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline-color: #f8b400;
+            border-color: #f8b400;
+        }
+
+        .contact-form .btn {
+            background-color: #f8b400;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .contact-form .btn:hover {
+            background-color: #e6a800;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 30px 0;
+        }
+
+        .footer h3 {
+            color: #f8b400;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #f8b400;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><i class="fas fa-hiking"></i> travel.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#category">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#packages">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="d-flex" action="" method="get">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-warning" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home" style="position: relative; background: url('images/home1.jpg') no-repeat center center; background-size: cover; height: 100vh;">
+        <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5);"></div>
+        <div class="content text-center text-white" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <span style="font-size: 40px; font-weight: bold; color: #FFD700; margin-bottom: 0;">Never Stop</span>
+            <h3 style="font-size: 60px; font-weight: 700; color: #ffffff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); margin-top: 5px;">Exploring</h3>
+            <p style="font-size: 22px; color: #ffffff; max-width: 700px; margin: 20px auto; line-height: 1.5;">Discover the best Umrah and Hajj tour packages with AL-INAM. Your spiritual journey begins here.</p>
+            <a href="#category" class="btn btn-warning btn-lg mt-4" style="background-color: #f8b400; border: none; font-size: 18px; padding: 15px 30px; border-radius: 30px;">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="category" id="category">
+        <h1 class="heading text-center mb-5">ABOUT US</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4q8xI9sHM138hwcoDnyK07ErOxJSdfk-O8w&s" class="img-fluid" alt="Umrah Tours">
+                        <h3>Umrah Tours</h3>
+                        <p>We provide comprehensive Umrah packages that include accommodation, transportation, and guided tours to ensure a fulfilling spiritual journey.</p>
+                        <a href="https://en.wikipedia.org/wiki/Umrah" class="btn btn-primary">read more</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <img src="https://d3i6fh83elv35t.cloudfront.net/static/2024/06/2023-06-30T193152Z_2131110795_RC2VT1AKIB7V_RTRMADP_3_SAUDI-HAJ-789x1024.jpg" class="img-fluid" alt="Hajj Tours">
+                        <h3>Hajj Tours</h3>
+                        <p>Our Hajj packages are designed to offer you a seamless experience, including all necessary arrangements for your pilgrimage.</p>
+                        <a href="https://en.wikipedia.org/wiki/Hajj" class="btn btn-primary">read more</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <img src="https://www.yaqeeninstitute.org/wp-content/uploads/img/paper/012/012_rect_default.jpg" class="img-fluid" alt="Spiritual Guidance">
+                        <h3>Spiritual Guidance</h3>
+                        <p>We offer spiritual guidance and support throughout your journey, ensuring you have a meaningful experience.</p>
+                        <a href="#" class="btn btn-primary">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Packages Section -->
+    <section class="packages" id="packages" style="padding-top: 80px; padding-bottom: 80px;">
+        <h1 class="heading text-center mb-5">Popular Packages</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://ziyaratours.co.uk/wp-content/uploads/2023/02/ibrahim-uz-3Z3RvzpVAqM-unsplash-scaled-e1675390901110.jpg" class="card-img-top" alt="Umrah Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Umrah Package</h5>
+                            <p class="card-text">Experience the spiritual journey of Umrah with our all-inclusive packages that cover flights, hotels, and guided tours.</p>
+                            <div class="price">Rs 25,000 - Rs 35,000</div>
+                            <a href="#contact" class="btn btn-primary">explore now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://images.theconversation.com/files/472867/original/file-20220706-4568-h7xf2a.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip" class="card-img-top" alt="Hajj Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Hajj Package</h5>
+                            <p class="card-text">Join us for a life-changing Hajj experience with our comprehensive packages that include accommodation, meals, and transportation.</p>
+                            <div class="price">Rs 1,00,000 - Rs 1,50,000</div>
+                            <a href="#contact" class="btn btn-primary">explore now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://siddiquitravels.com/admin/MyImages/blog/6.jpg" class="card-img-top" alt="Family Umrah Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Family Umrah Package</h5>
+                            <p class="card-text">Specially designed for families, this package ensures a comfortable and memorable Umrah experience for all ages.</p>
+                            <div class="price">Rs 30,000 - Rs 45,000</div>
+                            <a href="#contact" class="btn btn-primary">explore now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://www.swissotel.com/assets/0/92/2119/5783/5823/5825/6442451727/2daba4f0-b94b-4d50-a592-2c46e8399965.jpg"  class="card-img-top" alt="Group Hajj Package">
+                        <div class="card-body">
+                            <h5 class="card-title">Group Hajj Package</h5>
+                            <p class="card-text">Travel with a group and enjoy the benefits of shared experiences and costs while performing Hajj.</p>
+                            <div class="price">Rs 90,000 - Rs 1,20,000</div>
+                            <a href="#contact" class="btn btn-primary">explore now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="title1">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="contact-form">
+                <form method="post" action="contact_us.php">
+                    <div class="input-fields">
+                        <input type="text" class="form-control" placeholder="Name" name="name">
+                        <input type="email" class="form-control" placeholder="Email Address" name="email" pattern=".+@gmail\.com">
+                        <input type="phone" class="form-control" placeholder="Phone" name="phone">
+                        <input type="text" class="form-control" placeholder="Subject" name="subject">
+                    </div>
+                    <div class="msg">
+                        <textarea class="form-control" placeholder="Message" name="message"></textarea>
+                        <br>
+                        <div class="btn1"><button type="submit" class="btn btn-primary">Send <i class="uil uil-message"></i></button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Quick links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#packages">Packages</a>
+                    <a href="#query">Query</a>
+                </div>
+                <div class="col-md-3">
+                    <h3>Extra links</h3>
+                    <a href="#contact">Ask Questions</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="col-md-3">
+                    <h3>Contact Info</h3>
+                    <a href="tel:+91-9987404449"> <i class="fas fa-phone"></i> +91 7208697406 / +91 9321728133 </a>
+                    <a href="mailto:alinamtoursandtravels@gmail.com"> <i class="fas fa-envelope"></i> alinamtoursandtravels@gmail.com </a>
+                    <a href="#"> <i class="fas fa-map"></i> Mumbai- 400037 </a>
+                </div>
+                <div class="col-md-3">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.instagram.com/alinamtoursandtravels/" class="fab fa-instagram"> Instagram</a>
+                    <a href="https://twitter.com/alinamtourtravel" class="fab fa-twitter"> Twitter</a>
+                    <a href="https://www.facebook.com/alinamtoursandtravels/" class="fab fa-facebook"> Facebook</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
